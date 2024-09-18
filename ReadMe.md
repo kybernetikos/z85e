@@ -1,12 +1,13 @@
 # z85e
 
-This project implements an extended version of the ZeroMQ z85 encoding standard described [here](https://rfc.zeromq.org/spec/32/).  It is a port of [coenm/Z85e](https://github.com/coenm/Z85e) from C# to javascript.  The extension is simply to enable encoding and decoding of arbirary length inputs, where the original required inputs to be multiples of 4 bytes to encode or 5 characters to decode.
+This project implements an extended version of the ZeroMQ z85 encoding standard described [here](https://rfc.zeromq.org/spec/32/).  It is a port of [coenm/Z85e](https://github.com/coenm/Z85e) from C# to javascript.  The extension is simply to enable encoding and decoding of arbitrary length inputs, where the original required inputs to be multiples of 4 bytes to encode or 5 characters to decode.
 
 The Z85 encoding has a few nice properties.  It doesn't blow up data as much as Base64 does, and it is source code safe - you can copy and paste it into a string, and not have to worry about escapes or quotes causing problems.
 
-This library can be included as a single file without dependencies in a browser or node (./src/z85e.js).
+This library can be included as a single file without dependencies in a browser .
+e.g. `<script type="module">import {decode, encode} from "https://cdn.jsdelivr.net/npm/z85e/src/z85e.js"</script>`
 
-Stream support is provided in a separate file (./src/streams.js)
+Web Streams support is provided in a separate file (src/streams.js)
 
 ## Installation
 
@@ -22,9 +23,10 @@ If you plan to use the z85encode and z85decode cli tools, you might want to use 
 import {decode, encode} from "z85e"
 import {readFileSync} from "fs"
 
-const fileContentBuffer = readFileSync("./src/z85e.js", null)
-const fileContentStr = readFileSync("./src/z85e.js", "utf-8")
+const fileContentBuffer = readFileSync("./package.json", null)
+const fileContentStr = readFileSync("./package.json", "utf-8")
 const str = encode(fileContentBuffer)
+console.log(str)
 const decodedStr = decode(str)
 if (new TextDecoder().decode(decodedStr) !== fileContentStr) {
     throw new Error("Decode failed")

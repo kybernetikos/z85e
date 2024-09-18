@@ -18,5 +18,9 @@
   "bin": {
     "z85encode": "bin/encode.js",
     "z85decode": "bin/decode.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kybernetikos/z85e.git"
   }
 }
