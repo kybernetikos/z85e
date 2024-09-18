@@ -1,0 +1,17 @@
+{
+  "name": "z85e",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node src/test_z85e.js"
+  },
+  "keywords": ["z85", "ascii85", "base85", "binary-to-text"],
+  "author": "Kybernetikos <me@kybernetikos.com>",
+  "license": "MIT",
+  "description": "A javascript port of the Z85e C# library by coenm. Z85e is a Zero-MQ Base-85 Binary-To-Text encoding.",
+  "bin": {
+    "z85encode": "./bin/encode.js",
+    "z85decode": "./bin/decode.js"
+  }
+}
