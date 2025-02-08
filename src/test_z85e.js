@@ -32,7 +32,7 @@ function compareArrays(arr1, arr2) {
 for (let [encoded, decoded] of Object.entries(testExamples)) {
     const d = decode(encoded)
     compareArrays(d, decoded)
-    const r= encode(d)
+    const r = encode(d)
     if (r !== encoded) {
         console.error("Encoding/decoding cycle produced different result", d, r)
         throw new Error("Encoding different")

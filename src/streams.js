@@ -1,6 +1,6 @@
-import {decode, encodeToUint8Array, encode} from "./z85e.js"
+import {decode, encodeToUint8Array} from "./z85e.js"
 
-export class RechunkTransform {
+class RechunkTransform {
     #segmentLength = null
     #leftOver = null
     #join = null

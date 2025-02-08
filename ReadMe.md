@@ -17,6 +17,12 @@ npm install z85e
 
 If you plan to use the z85encode and z85decode cli tools, you might want to use the `-g` flag to install them globally.
 
+Alternatively, you can use them via npx:
+
+```shell
+cat <file> | npx -p z85e z85encode -z | npx -p z85e z85decode -z
+```
+
 ## Use
 
 ```js

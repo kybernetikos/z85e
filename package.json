@@ -1,6 +1,7 @@
 {
   "name": "z85e",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "A javascript port of the Z85e C# library by coenm. Z85e is a Zero-MQ Base-85 Binary-To-Text encoding.",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -12,9 +13,8 @@
     "base85",
     "binary-to-text"
   ],
-  "author": "Kybernetikos <me@kybernetikos.com>",
+  "author": "kybernetikos <me@kybernetikos.com>",
   "license": "MIT",
-  "description": "A javascript port of the Z85e C# library by coenm. Z85e is a Zero-MQ Base-85 Binary-To-Text encoding.",
   "bin": {
     "z85encode": "bin/encode.js",
     "z85decode": "bin/decode.js"
